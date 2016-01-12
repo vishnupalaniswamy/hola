@@ -1,6 +1,6 @@
 # Server
-- The Server is a Spring Boot app. The config source can be git, svn or filesystem.
-- 
+
+-The Server is a Spring Boot app. The config source can be git, svn or filesystem.
 
 # Client
 
