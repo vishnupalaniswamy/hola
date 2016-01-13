@@ -1,6 +1,8 @@
 # Server
 
 -The Server is a Spring Boot app. The config source can be git, svn or filesystem.
+-SVN support is provided, but the underlying repository implementation is provided through SNNKit and must be licensed (http://svnkit.com/licensing.html)
+- 
 
 # Client
 
