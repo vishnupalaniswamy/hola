@@ -9,3 +9,6 @@
 
 - bootstrap.yml has to specify the application.name, which should be the same as the config name (e.g ldng-es-web).
 - To refresh the configuration from the Config Server, send a HTTP POST request to the /refresh endpoint. JMX can also be used to refresh the configuration.
+- Spring Boot 1.2.1.RELEASE depends on Spring framework 4.1.4.RELEASE.
+- Spring Boot Cloud on the client needs to be 1.0.0.RELEASE
+
