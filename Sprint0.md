@@ -3,7 +3,7 @@
 The intent of the prototype is to implement an end-to-end Spring Config enabled Server and Client application in LDNG that stores the configuration in SVN and an update to the configuration is reflected on the client application without restarts. The following components were developed/modified.
 
 * A new Spring Config Server instance connected to SVN that provides the configuration for the LDNG ES application 
-* s  
+* The LDNG ES application modified to use Spring Boot that loads it's configuration from the Config Server on startup.    
 
 # Server
 
