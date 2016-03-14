@@ -4,7 +4,26 @@
 - The Server code is available in SVN under http://plsysadm-cm07:8888/cm-repos/ldng/devbranches/LDNG.1.3_INT_DEV_CONFIGSRV/config-server
 - config-server will be a Spring Boot application that will be a deployable WAR file, specified by the 'packaging' tag in pom.xml. To build a war file that is both executable and deployable into an external container embedded container dependencies are marked as 'provided'.
 ```
-code
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- ... -->
+    <packaging>war</packaging>
+    <!-- ... -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- ... -->
+    </dependencies>
+</project>
+
 ```
 - For SVN, SVNKit licensing is required. http://svnkit.com/licensing.html
 - Config files can be separated by application folders under the git/svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
