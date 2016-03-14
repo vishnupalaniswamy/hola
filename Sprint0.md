@@ -1,9 +1,10 @@
 
 # Server
 
-- ldng-config-server will be a Spring Boot application that will be a deployable WAR file
+- The Server code is available in SVN under http://plsysadm-cm07:8888/cm-repos/ldng/devbranches/LDNG.1.3_INT_DEV_CONFIGSRV/config-server
+- config-server will be a Spring Boot application that will be a deployable WAR file, specified by the 'packaging' tag in pom.xml. To build a war file that is both executable and deployable into an external container you need to mark the embedded container dependencies as 'provided'.
 - For SVN, SVNKit licensing is required. http://svnkit.com/licensing.html
-- Config files can be separated by application folders under the git/svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties
+- Config files can be separated by application folders under the git/svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
 
 # Client
 
