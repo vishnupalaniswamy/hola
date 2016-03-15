@@ -44,7 +44,7 @@ The intent of the prototype is to implement an end-to-end Spring Config enabled 
 ## Changes 
 
 - Spring Boot 1.2.1.RELEASE depends on Spring framework 4.1.4.RELEASE.
-- Spring Boot Cloud on the client needs to be 1.0.0.RELEASE
+- Spring Boot Cloud on the client needs to be 1.0.0.RELEASE.
 - The following dependencies were added to pom.xml. A spring boot maven plugin is also required for packaging. 
  ```
 		<dependency>
