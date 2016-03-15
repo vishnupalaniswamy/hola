@@ -32,7 +32,8 @@ The intent of the prototype is to implement an end-to-end Spring Config enabled 
 
 ```
 - For SVN, SVNKit licensing is required. http://svnkit.com/licensing.html
-- Config files can be separated by application folders under the git/svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
+  - Config files can be separated by application folders under the svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
+- The SVN folder structure has to use the SVN standard 'tags', 'branches' and 'trunk' strucuture. The config file folders should exisit under these SVN folders. In addition, for older Spring Config library versions, the 'master' folder is required. 
 
 # Client
 
