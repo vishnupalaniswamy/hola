@@ -32,13 +32,46 @@ The intent of the prototype is to implement an end-to-end Spring Config enabled 
 
 ```
 - For SVN, SVNKit licensing is required. http://svnkit.com/licensing.html
-  - Config files can be separated by application folders under the svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
+- Config files can be separated by application folders under the svn base uri. e.g. ldng-ts/ldng-ts.properties, ldng-ts/ldng-ts-development.properties. The 'searchPaths' property in bootstrap.yml is used to specifiy the folders.
 - The SVN folder structure has to use the SVN standard 'tags', 'branches' and 'trunk' strucuture. The config file folders should exisit under these SVN folders. In addition, for older Spring Config library versions, the 'master' folder is required. 
 
 # Client
 
+- The LDNG ES application was converted to a Spring Boot Application, which involves adding dependencies and additional configuration.
 - bootstrap.yml has to specify the application.name, which should be the same as the config name (e.g ldng-es-web).
 - To refresh the configuration from the Config Server, send a HTTP POST request to the /refresh endpoint. JMX can also be used to refresh the configuration.
+
+## Changes 
+
 - Spring Boot 1.2.1.RELEASE depends on Spring framework 4.1.4.RELEASE.
 - Spring Boot Cloud on the client needs to be 1.0.0.RELEASE
+- The following dependencies were added to pom.xml 
+- ```
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.2.1.RELEASE</version>
+		</dependency>		
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+			<version>1.2.1.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<version>1.2.1.RELEASE</version>
+		</dependency>	
+		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+			<version>1.0.4.RELEASE</version>
+		</dependency>
+```
+- 
 
